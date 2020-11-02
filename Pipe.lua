@@ -11,7 +11,7 @@
 
 Pipe = Class{}
 
--- since we only want the image loaded once, not per instantation, define it externally
+-- since we only want the image loaded once, not per instantiation, define it externally
 local PIPE_IMAGE = love.graphics.newImage('textures/pipe.png')
 PIPE_WIDTH = PIPE_IMAGE:getWidth()
 PIPE_HEIGHT = PIPE_IMAGE:getHeight()
