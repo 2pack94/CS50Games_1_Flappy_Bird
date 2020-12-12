@@ -40,11 +40,12 @@ end
 
 --[[
     The position of *self is updated with the Semi-implicit Euler Integration. It uses the the new velocity to update d.
+    see: https://gafferongames.com/post/integration_basics/
     v: velocity, v_0: velocity of the previous frame, a: acceleration, d: position, d_0: position of the previous frame
     1. calculate the velocity with explicit Euler: v = a * t + v_0
     2. calculate the position with implicit Euler: d = v * t + d_0 = a * t^2 + v_0 * t + d_0
     The solution of Explicit Euler would be: d = (a / 2) * t^2 + v_0 * t + d_0
-    -> only correct when acceleration is constant. Uses the average velocity between v and v_0 to update d
+    -> explicit Euler is only correct when acceleration is constant. It uses the average velocity between v and v_0 to update d
 ]]
 function Bird:update(dt)
     if keyboardWasPressed('space') or mouseWasPressed(1) then

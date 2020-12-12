@@ -24,7 +24,7 @@ end
 
 function ScoreState:update(dt)
     -- go back to play if enter is pressed
-    if keyboardWasPressed('enter') or keyboardWasPressed('return') then
+    if keyboardWasPressed('return') then
         gStateMachine:change('countdown')
     end
 end

@@ -12,7 +12,7 @@
 TitleScreenState = Class{__includes = BaseState}
 
 function TitleScreenState:update(dt)
-    if keyboardWasPressed('enter') or keyboardWasPressed('return') then
+    if keyboardWasPressed('return') then
         gStateMachine:change('countdown')
     end
 end
